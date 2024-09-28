@@ -8,8 +8,7 @@ import json
 import pathlib
 import urllib.request
 from urllib.parse import urlparse
-from multiprocessing import Pool
-import os
+from concurrent.futures import ThreadPoolExecutor
 
 BUCKET_FILE_PATH = "bucket.json"
 WALLPAPERS_DIR_PATH = "wallpapers/"
@@ -77,5 +76,5 @@ if __name__ == "__main__":
     wallpaper_urls = extract_image_urls(BUCKET_FILE_PATH)
     wallpaper_urls = filter_image_urls(wallpaper_urls)
 
-    pool = Pool(os.cpu_count())
-    pool.map(download_wallpaper, wallpaper_urls)
+    with ThreadPoolExecutor(max_workers=20) as executor:
+        executor.map(download_wallpaper, wallpaper_urls)
