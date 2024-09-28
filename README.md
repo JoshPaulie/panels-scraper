@@ -1,4 +1,4 @@
-# Panels Scrapper
+# Panels Scraper
 
 > [!CAUTION]
 > This project is purely for educational use. All art/wallpapers are protected by US Copyright law, and property of Panels Wallpaper Mobile App LLC. Do NOT use this to gain access to wallpapers illicitly.
