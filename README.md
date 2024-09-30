@@ -11,17 +11,16 @@
 1. Clone repo, cd into it
 2. Download a file in the same format of the Panels bucket[^1]
 3. Rename it `bucket.json` & move it into the same directory of this script
-4. Run this script with `python scrapers.py`
+4. Run this script with `python scraper.py`
 
-## Multiprocessing
-This script downloads the wallpapers in parallel via multiprocessing
+## Paralelization
+This script downloads the wallpapers in parallel, here are some fun stats.
 
-| Processes | Seconds |
-|-----------|---------|
-| Single    | 105     |
-| Multi     | 21      |
-
-**~80%** speed increase!
+| Method          | Time |
+|-----------------|------|
+| Concurrent      | 105s |
+| Multiprocessing | 21s  |
+| Multithreaded   | 14s  |
 
 ## Credit
 The following "Xeet" details more about the publicly available bucket
